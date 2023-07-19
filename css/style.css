@@ -1,0 +1,227 @@
+/* Google Fonts - Poppins font with multiple weights */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Global CSS Reset */
+*{
+    border: 0;
+    outline: none;
+}
+
+body {
+    height: 100vh; /* sets the vertical position */
+    display: flex; /* sets the cross position */
+    align-items: center; /* sets the vertical position */
+    justify-content: center; /* sets the horizontal position */
+    background: radial-gradient(circle at center, #ff4e50, #f9d423);
+}
+ 
+/* Add styling for the centered text */
+.centered-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(50px); 
+    text-align: center;
+    font-size: 32px; 
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.main {
+    background-color: #fff;
+    padding: 30px 32px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-box {
+    width: 282px;
+    margin-top: 95px;
+    margin-left: 25px;
+}
+
+.search-box input {
+    color: #055deb;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.search-box input::placeholder {
+    font-size: 15px;
+    color: #055deb;
+}
+
+.search-box button {
+    width: 60px;
+    height: 50px;
+    color: #055deb;
+    border-radius: 60%;
+    font-size: 20px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.seperator::before {
+    content: 'OR';
+    background-color: #fff;
+    color: #055deb;
+    padding: 0 15px;
+}
+
+.findlocation .seperator {
+    height: 1px; 
+    margin: 15px 0;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.findlocation {
+    width: 290px;
+    margin-top: 45px;
+    margin-left: 25px;
+}
+
+.findlocation button {
+    color: #fff;
+    font-size: 25px;
+    background: #055deb;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* it help us for don't show for before the start*/
+.weather-box, .weather-details { 
+    scale: 0;
+    opacity: 0;
+}
+
+.weather-box img {
+    width: 30%;
+    margin-top: 10px;
+    margin-left: 125px;
+}
+
+.weather-box .temperature {
+    color: #062464;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1px;
+    margin-left: 165px;
+}
+
+.weather-box .description {
+    color: #062464;
+    font-size: 2rem;
+    margin-left: 155px;
+    margin-top: -20px;
+    font-weight: 400;
+}
+
+.weather-box .date {
+    color: #062464;
+    font-size: 1rem;
+    margin-left: 120px;
+    margin-top: -10px;
+    font-weight: 400;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.weather-details .humidity, .weather-details .wind,.weather-details .feels_like{
+    display: flex;
+    align-items: center;
+}
+
+.weather-details i {
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.weather-details span {
+    font-size: 20px;
+}
+
+.weather-details .wind{
+    margin-left: 20px;
+}
+
+.weather-details .feels_like{
+    margin-left: -3px;
+}
+
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not-found img {
+    width: 70%;
+}
+
+.not-found p {
+    color: #640c06;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+/* Fade-in animation styles */
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.forecast-box {
+    border: 1px solid #a52929;
+    border-radius: 50px; 
+    background-color: #f9f9f9; 
+    box-shadow: 10px 10px 10px #2a3cad;
+}
+
+.forecast-box img {
+    margin-top: 25px;
+    margin-left: 112px;
+    width: 30%;
+    transition: 5.0s ease;
+}
+
+.forecast-box .forecast-temperature {
+    color: #062464;
+    font-size: 2rem;
+    margin-left: 132px;
+}
+
+.forecast-box .forecast-description {
+    color: #062464;
+    margin-left: 130px;
+    margin-top: -20px;
+}
+
+.forecast-box .forecast-date {
+    color: #062464;
+    font-size: 14px;
+    margin-left: 99px;
+}
+
